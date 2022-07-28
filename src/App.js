@@ -29,7 +29,14 @@ const App = () => {
     <Context.Provider value={{removeTodo: removeTodo}}>
       <div className="wrapper">
         <h1>React</h1>
-        <TodoList todos={todos} onToggle={toggleTodo}/>
+        {
+          todos.length ? (
+            <TodoList todos={todos} onToggle={toggleTodo}/>
+          ) : (
+            <p>Нет дел.</p>
+          )
+        }
+        
       </div>
     </Context.Provider>
   );

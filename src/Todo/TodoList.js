@@ -1,12 +1,22 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-    return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
-        </ul>
-    )
-}
+  const styles = {
+    ul: {
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+    },
+  };
+
+  return (
+    <ul style={styles.ul}>
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+    </ul>
+  );
+};
 
 export default TodoList;

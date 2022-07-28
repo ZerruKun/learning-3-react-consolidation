@@ -1,9 +1,10 @@
 import React from "react";
 
-const TodoItem = () => {
+const TodoItem = ({todo, index}) => {
   return (
   <li>
-    todo
+    <strong>{index + 1}</strong>
+    {todo.title}
   </li>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
+const TodoList = (props) => {
   const styles = {
     ul: {
       listStyle: "none",
@@ -12,9 +12,9 @@ const TodoList = () => {
 
   return (
     <ul style={styles.ul}>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {props.todos.map((todo, index) => {
+            return <TodoItem todo={todo} key={todo.id} index={index}/>
+        })}
     </ul>
   );
 };
